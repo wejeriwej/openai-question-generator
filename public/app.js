@@ -1,8 +1,8 @@
-const generateResponse = async (input) => {
-  const response = await fetch("http://localhost:3000/api/generate", {
+const generateResponse = async (topic) => {
+  const response = await fetch("https://openai-question-generator.onrender.com/api/song", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ input })
+    body: JSON.stringify({ topic })
   });
 
   const data = await response.json();
@@ -17,11 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   submitButton.addEventListener("click", async () => {
     const input = inputField.value.trim();
     if (!input) {
-      responseArea.textContent = "Please enter a topic first!";
+      responseArea.textContent = "Please enter a song first!";
       return;
     }
 
-    responseArea.textContent = "Generating question...";
+    responseArea.textContent = "Generating your song...";
     try {
       const output = await generateResponse(input);
       responseArea.textContent = output;
