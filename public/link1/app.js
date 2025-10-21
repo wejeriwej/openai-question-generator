@@ -31,3 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+
+const newquestion = document.getElementById("newquestion");
+newquestion.addEventListener('click', () => {
+      // This sends the browser to another page (like about.html)
+      window.location.href = '../index.html';
+    });

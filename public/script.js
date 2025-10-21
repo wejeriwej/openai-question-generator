@@ -31,3 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+
+const newquestion = document.getElementById("newquestion");
+newquestion.addEventListener('click', () => {
+      // This sends the browser to another page (like about.html)
+      window.location.href = 'link1/trial.html';
+    });
+
+    const oscequestion = document.getElementById("oscequestion");
+oscequestion.addEventListener('click', () => {
+      // This sends the browser to another page (like about.html)
+      window.location.href = 'link2/trialosce.html';
+    });
